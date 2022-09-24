@@ -21,13 +21,19 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 
 @SpringBootApplication
+@EnableAutoConfiguration
+@EnableTransactionManagement
 public class OrderManagmentApplication {
 
+	
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(OrderManagmentApplication.class, args);
+		
 	}
+	
 }
