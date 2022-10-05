@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.domain;
+package com.hexaware.order.management.domain;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -36,26 +36,27 @@ public class Product {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long productId;
 	
-	
     private String tittle;
 	 
-	
 	private String description;
 	
-	private int price;
+	private Float price;
 	
-	private int stock;
+	private Integer stock;
 	
+	public Product(Long productId, String tittle, String description, Float price, Integer stock) {
+		
+		this.productId = productId;
+		this.tittle = tittle;
+		this.description = description;
+		this.price = price;
+		this.stock = stock;
+	}
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private Collection<OrderDetail> ordersDetails = new ArrayList<>();
 	
-	@Override
 	public String toString() {
-		return "[productId:"+productId+"][tittle:"+tittle
-				+"][description:"+description+"]"
-				+"][price:"+price+"]"
-				+"][stock:"+stock+"]";
-	
+		return "productId:"+productId+",tittle"+tittle;
 	}
 }

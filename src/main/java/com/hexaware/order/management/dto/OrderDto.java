@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.dto;
+package com.hexaware.order.management.dto;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.hexaware.order.managment.domain.Product;
+import com.hexaware.order.management.domain.Product;
 import com.sun.istack.NotNull;
 
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.dto;
+package com.hexaware.order.management.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -21,7 +21,11 @@ public class ProductDto {
 	 
 	private String description;
 	
-	private Integer price;
+	private Float price;
 	
 	private Integer stock;
+	
+	private Integer qty;
+	
+	private Integer discount;
 }

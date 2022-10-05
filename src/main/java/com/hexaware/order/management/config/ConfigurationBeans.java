@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.config;
+package com.hexaware.order.management.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

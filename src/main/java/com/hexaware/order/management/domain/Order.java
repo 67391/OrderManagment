@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.domain;
+package com.hexaware.order.management.domain;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -30,6 +30,7 @@ import lombok.ToString;
 @Entity
 @Setter
 @Getter
+@ToString
 @Table( name ="`order`")
 public class Order {
 
@@ -44,17 +45,9 @@ public class Order {
 	private String status;
 	
 	private Long total;
-
+	
+	@ToString.Exclude
 	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private Collection<OrderDetail> ordersDetails = new ArrayList<>();
 	
-
-	@Override
-	public String toString() {
-		return "[id:"+orderId+"][description:"+description
-				+"][products:"+ordersDetails.stream()
-				.map( Object::toString )
-				.collect( Collectors.joining( "," ) )+"]";
-
-	}
 }

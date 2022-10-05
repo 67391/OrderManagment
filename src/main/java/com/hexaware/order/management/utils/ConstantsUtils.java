@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.utils;
+package com.hexaware.order.management.utils;
 
 public class ConstantsUtils {
 

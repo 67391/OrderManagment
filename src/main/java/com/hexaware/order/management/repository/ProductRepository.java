@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.hexaware.order.managment.repository;
+package com.hexaware.order.management.repository;
 
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.hexaware.order.managment.domain.Product;
+import com.hexaware.order.management.domain.Product;
 
 
 @Repository

@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package com.hexaware.order.managment;
+package com.hexaware.order.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
@@ -28,12 +29,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableTransactionManagement
+@EnableWebSecurity
 public class OrderManagmentApplication {
 
 	
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(OrderManagmentApplication.class, args);
-		
+	
 	}
 	
 }

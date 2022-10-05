@@ -1,4 +1,4 @@
-package com.hexaware.order.managment.dto;
+package com.hexaware.order.management.dto;
 
 import java.util.Set;
 
